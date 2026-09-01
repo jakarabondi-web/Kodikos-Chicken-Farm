@@ -13,7 +13,7 @@ export function Header({
   meta?: ReactNode;
 }) {
   return (
-    <header className="flex flex-col gap-5 border-b border-border py-7 pl-16 pr-6 sm:flex-row sm:items-end sm:justify-between sm:pr-10 md:pl-6 lg:pl-10">
+    <header className="flex flex-col gap-5 border-b border-border px-6 py-7 sm:flex-row sm:items-end sm:justify-between sm:px-10">
       <div>
         <p className="text-[11.5px] font-bold uppercase tracking-[0.14em] text-primary">{eyebrow}</p>
         <h1 className="font-display mt-2 text-[36px] font-normal leading-[1.02] text-deep sm:text-[44px]">

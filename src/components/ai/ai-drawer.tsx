@@ -15,7 +15,7 @@ export function AIDrawer() {
         onClick={() => setOpen(true)}
         aria-label="Ask FarmOS AI"
         className={cn(
-          "fixed bottom-6 right-6 z-40 flex items-center gap-2 rounded-full bg-deep px-5 py-3.5 text-[12.5px] font-semibold text-canvas shadow-[0_16px_30px_rgba(32,64,47,0.35)] transition-transform hover:-translate-y-0.5",
+          "fixed bottom-20 right-5 z-40 flex items-center gap-2 rounded-full bg-deep px-5 py-3.5 text-[12.5px] font-semibold text-canvas shadow-[0_16px_30px_rgba(32,64,47,0.35)] transition-transform hover:-translate-y-0.5 md:bottom-6 md:right-6",
           open && "pointer-events-none opacity-0"
         )}
       >
