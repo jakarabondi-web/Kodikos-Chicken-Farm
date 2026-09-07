@@ -33,7 +33,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full overflow-x-hidden bg-canvas text-text">
         <Sidebar />
         <MobileNav />
-        <div className="min-w-0 md:pl-[78px]">
+        <div className="min-w-0 md:pl-[248px]">
           <main className="min-w-0 pb-24">{children}</main>
         </div>
         <AIDrawer />

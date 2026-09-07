@@ -22,6 +22,11 @@ export type NavItem = {
   icon: LucideIcon;
 };
 
+export type NavGroup = {
+  name: string;
+  items: NavItem[];
+};
+
 export const NAV_ITEMS: NavItem[] = [
   { label: "Home", href: "/", icon: Home },
   { label: "Live Farm", href: "/live-farm", icon: MapPin },
@@ -37,4 +42,26 @@ export const NAV_ITEMS: NavItem[] = [
   { label: "Alerts & Tasks", href: "/alerts", icon: BellRing },
   { label: "Staff & Roles", href: "/staff", icon: UserCog },
   { label: "Settings", href: "/settings", icon: Settings },
+];
+
+export const NAV_GROUPS: NavGroup[] = [
+  { name: "Overview", items: NAV_ITEMS.filter((i) => ["/"].includes(i.href)) },
+  {
+    name: "Farm",
+    items: NAV_ITEMS.filter((i) =>
+      ["/live-farm", "/flocks-houses", "/production", "/feed-inventory"].includes(i.href)
+    ),
+  },
+  {
+    name: "Commerce",
+    items: NAV_ITEMS.filter((i) => ["/sales", "/orders", "/deliveries"].includes(i.href)),
+  },
+  {
+    name: "Finance & Ops",
+    items: NAV_ITEMS.filter((i) => ["/finance", "/expenses", "/reports", "/alerts"].includes(i.href)),
+  },
+  {
+    name: "System",
+    items: NAV_ITEMS.filter((i) => ["/staff", "/settings"].includes(i.href)),
+  },
 ];
